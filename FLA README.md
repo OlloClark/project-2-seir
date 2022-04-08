@@ -25,6 +25,7 @@ Enter **Furnish LA**, the new app that allows members of the public to post any 
 **Technologies used:** HTML, CSS, Node.js
 **Database hosted at:**
 **Trello board:** https://trello.com/b/fKakcvEt/furnish-la
+**Wireframe:** https://whimsical.com/fla-home-view-N7bhiZAQGKwLc2vLPaaMie
 
 ![alt text](https://imgur.com/gallery/TxjIJXX)
 
