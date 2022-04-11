@@ -5,6 +5,12 @@ function list(req, res) {
     res.render("furnishings/index")
 }
 
+function newPage(req, res) {
+    console.log("looking at the 'new' page")
+    res.render("furnishings/new")
+}
+
 module.exports = {
-    list
+    list,
+    new: newPage
 }
