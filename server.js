@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const indexRoutes = require('./routes/index');
+
 // load the env consts
 require('dotenv').config();
 
@@ -17,6 +17,9 @@ const app = express();
 require('./config/database');
 // configure Passport
 require('./config/passport');
+
+const indexRouter = require('./routes/index');
+const furnishingsRouter = require("./routes/furnishings");
 
 
 
@@ -49,12 +52,13 @@ app.use(function (req, res, next) {
 });
 
 // mount all routes with appropriate base paths
-app.use('/', indexRoutes);
+app.use('/', indexRouter); // localhost:3000
+app.use("/furnishings", furnishingsRouter);
 
 
 // invalid request, send 404 page
 app.use(function(req, res) {
-  res.status(404).send('Cant find that!');
+  res.status(404).send('404 error: Cant find that!');
 });
 
 module.exports = app;
