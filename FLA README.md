@@ -1,11 +1,11 @@
 
 # Furnish LA
 
-## Los Angeles has some of the most furnished streets I've ever seen.
+## Los Angeles has the most furnished streets I've ever seen.
 
 You can't go more than three blocks without seeing a nice wooden shelving unit,
 a dining chair looking down its nose at the rolling deskchair next to it, and enough wooden pallets
-to build a fort.
+to soak up the tar pits.
 
 ### *If only there were a way to get the attention of the people who could benefit.*
 
