@@ -10,7 +10,18 @@ function newPage(req, res) {
     res.render("furnishings/new")
 }
 
+function create(req, res) {
+    const item = new Item(req.body);
+    item.save(function (err){
+        if (err) return res.redirect("/furnishings/new");
+        console.log(item);
+        res.redirect(`/furnishings`);
+    })
+    console.log(req.body, "saved new item!")
+}
+
 module.exports = {
     list,
-    new: newPage
+    new: newPage,
+    create
 }
