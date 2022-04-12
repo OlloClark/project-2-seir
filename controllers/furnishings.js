@@ -24,8 +24,15 @@ function create(req, res) {
         res.redirect(`/furnishings`);
     })};
 
+function show(req, res) {
+    Item.findById(req.params.id, function(err, itemDoc) {
+        res.render("furnishings/show");
+    })
+}
+
 module.exports = {
     list,
     new: newPage,
-    create
+    create,
+    show
 }
