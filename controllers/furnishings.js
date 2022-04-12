@@ -16,8 +16,10 @@ function newPage(req, res) {
 function create(req, res) {
     const item = new Item(req.body);
     item.save(function (err){
-        if (err) console.log(err, req.body);
-        return res.redirect("/furnishings/new");
+        if (err) {
+            console.log(err, req.body);
+        return res.redirect("/furnishings/new")
+        }
         console.log(item);
         res.redirect(`/furnishings`);
     })};

@@ -5,7 +5,6 @@
 <h2>Available furnishings</h2>
 
 <table id="list">
-    
     <thead>
       <tr>
         <th>Item</th>
@@ -15,17 +14,17 @@
       </tr>
     </thead>
     <tbody>
-      <% items.forEach(function(i){ %>
-    <tr>
-          <td><%= i.object %> </td>
-          <td><%= i.quantity %> </td>
-          <td><%= i.quality %> </td>
-          <td><%= i.zipCode %> </td>
+      <% items.forEach(function(i) { %>
+      <tr>
+        <td><%= i.object %> </td>
+        <td><%= i.quantity %> </td>
+        <td><%= i.quality %> </td>
+        <td><%= i.zipCode %> </td>
       </tr>
       <%  }); %> 
 
-      </tbody>
-    </table>
+    </tbody>
+</table>
 <br><br>
 
 </div>
