@@ -1,9 +1,12 @@
 const Item = require("../models/item");
 
 function list(req, res) {
-    console.log("looking at furnishings page")
-    res.render("furnishings/index")
-}
+    Item.find({}, function (err, items){
+    console.log("looking at furnishings page");
+    res.render("furnishings/index", {
+        items
+    })
+})}
 
 function newPage(req, res) {
     console.log("looking at the 'new' page")
