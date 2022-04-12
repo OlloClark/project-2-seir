@@ -15,7 +15,8 @@ object: {
             "deskchair", "couch", "cupboard", "shelving unit", "other (please leave details in Notes)"]
 },
 quantity: {
-    type: Number
+    type: Number,
+    min: 0
 },
 quality: {
     type: Number,
