@@ -2,4 +2,46 @@
 
 <h1>This is the "add a new item" page</h1>
 
+<form id="new-form" action="/furnishings" method="POST">
+    <label>Item:</label>
+    <select name="item">
+        <option value="mattress">mattress</option>
+        <option value="bedframe">bedframe</option>
+        <option value="chest of drawers">chest of drawers</option>
+        <option value="wardrobe">wardrobe</option>
+        <option value="dining chair">dining chair</option>
+        <option value="desk chair">desk chair</option>
+        <option value="couch">couch</option>
+        <option value="cupboard">cupboard</option>
+        <option value="shelving unit">shelving unit</option>
+        <option value="wooden pallet">wooden pallet</option>
+        <option value="other">other (please leave details)</option>
+    </select>
+    <br>
+    <br>
+    <label>Quantity:</label>
+    <input type="text" name="quality">
+    <br>
+    <br>
+    <label>Quality:</label>
+    <select name="quality">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <label>(1: Like new, 5: Heavily damaged</label>
+    <br>
+    <br>
+    <label>Location:</label>
+    <input type="text" name="location">
+    <br>
+    <br>
+    <label>Zipcode:</label>
+    <input type="text" name="zipcode">
+</form>
+<br>
+
+
 <%- include("../partials/footer")  %> 
