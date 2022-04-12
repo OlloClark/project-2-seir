@@ -13,6 +13,7 @@
         <th> Zipcode</th>
       </tr>
     </thead>
+    <br>
     <tbody>
       <% items.forEach(function(i) { %>
       <tr>
@@ -20,6 +21,7 @@
         <td><%= i.quantity %> </td>
         <td><%= i.quality %> </td>
         <td><%= i.zipCode %> </td>
+        <td><a href="/furnishings/<%= i.id %>">details</a></td>
       </tr>
       <%  }); %> 
 

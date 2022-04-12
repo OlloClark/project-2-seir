@@ -8,6 +8,10 @@ router.get("/", furnishingsCtrl.list);
 //GET /furnishings/new
 router.get("/new", furnishingsCtrl.new);
 
+// //GET /furnishings/show page
+
+router.get("/:id", furnishingsCtrl.show);
+
 //POST to /furnishings
 router.post("/", furnishingsCtrl.create);
 
