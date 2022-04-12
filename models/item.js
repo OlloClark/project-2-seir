@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const noteSchema = new Schema ({
-    comment: {
-        type: String
+    content: {
+        type: String,
+        required: true
     }
 })
 
@@ -29,7 +30,7 @@ location: {
 zipCode: {
     type: Number
 },
-Notes: [noteSchema]
+notes: [noteSchema]
 })
 
 module.exports = mongoose.model("Item", itemSchema);
