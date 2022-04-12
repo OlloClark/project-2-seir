@@ -26,7 +26,7 @@ function create(req, res) {
 
 function show(req, res) {
     Item.findById(req.params.id, function(err, itemDoc) {
-        res.render("furnishings/show");
+        res.render("furnishings/show", {item: itemDoc});
     })
 }
 
