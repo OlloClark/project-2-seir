@@ -15,12 +15,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
+      <% items.forEach(function(i){ %>
+    <tr>
+          <td><%= i.object %> </td>
+          <td><%= i.quantity %> </td>
+          <td><%= i.quality %> </td>
+          <td><%= i.zipCode %> </td>
       </tr>
+      <%  }); %> 
+
       </tbody>
     </table>
 <br><br>
