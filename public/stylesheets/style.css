@@ -30,13 +30,14 @@ body {
   grid-template-rows: 50px 1fr 50px;
   grid-template-columns: 1fr 3fr 1fr;
   font-family: Geneva;
+  color: #3A302D;
   
 }
 
 body > nav {
   grid-row: 1 / 2;
   grid-column: 1 / 4;
-  background-color: #4C6827;
+  background-color: #82823C;
   display: grid;
   grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -62,9 +63,9 @@ body > nav {
   grid-column: 2 / 3;
   text-align: center;
   margin: auto;
-  border: 1px solid red;
   background-color: #B6A66B;
   opacity: 0.9;
+  filter: drop-shadow(10px 10px 12px);
 }
 
 #new-form {
@@ -79,9 +80,9 @@ body > nav {
   grid-column: 2 / 3;
   text-align: center;
   margin: auto;
-  border: 1px solid red;
   background-color: #B6A66B;
   opacity: 0.9;
+  filter: drop-shadow(10px 10px 12px);
 }
 
 .login {
@@ -96,5 +97,12 @@ body > nav {
 
 .login img {
   height: 30px;
+}
+
+#centreTitle {
+  grid-column: 3 / 4;
+  font-size: x-large;
+  text-align: center;
+  margin: auto;
 }
 
