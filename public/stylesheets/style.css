@@ -79,7 +79,7 @@ body > nav {
   height: 30px;
 }
 
-#centreTitle {
+#titleLink {
   grid-column: 3 / 4;
   font-size: x-large;
   text-align: center;
