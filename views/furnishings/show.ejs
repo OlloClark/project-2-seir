@@ -1,5 +1,7 @@
 <%- include("../partials/header")  %>
 
+
+<div class="central-window">
 <section>
     <div><em>Item:</em></div>
     <div><%= item.object %> </div>
@@ -14,11 +16,12 @@
     
 </section>
 
-<h2>Add Notes:</h2>
+
+<h4>Add Notes:</h4>
 
 <form id="note-form" method="POST" action="/furnishings/<%= item._id %>/notes">
-    <label>Notes:</label>
     <textarea name="content"></textarea>
+    <br>
     <input type="submit" value="Add notes">
   </form>
 
@@ -41,5 +44,6 @@
   <% } else { %>
     <h5>No notes added yet</h5>
   <% } %>
+</div>
 
 <%- include("../partials/footer")  %>

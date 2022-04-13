@@ -58,31 +58,11 @@ body > nav {
   margin: auto;
 }
 
-#welcome {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-  text-align: center;
-  margin: auto;
-  background-color: #B6A66B;
-  opacity: 0.9;
-  filter: drop-shadow(10px 10px 12px);
-}
-
 #new-form {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   text-align: center;
   margin: auto;
-}
-
-#listDiv {
-  grid-row: 2 / 3;
-  grid-column: 2 / 3;
-  text-align: center;
-  margin: auto;
-  background-color: #B6A66B;
-  opacity: 0.9;
-  filter: drop-shadow(10px 10px 12px);
 }
 
 .login {
@@ -104,5 +84,16 @@ body > nav {
   font-size: x-large;
   text-align: center;
   margin: auto;
+}
+
+.central-window {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  text-align: center;
+  margin: auto;
+  background-color: #B6A66B;
+  opacity: 0.9;
+  filter: drop-shadow(10px 10px 12px);
+  padding: 10px;
 }
 
