@@ -1,7 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require("../models/user")
-
+console.log(process.env.GOOGLE_CALLBACK);
 // configuring Passport!
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -9,7 +9,10 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
    function(accessToken, refreshToken, profile, cb) {
+     console.log("cmon google");
+     console.log(profile);
     User.findOne({ googleId: profile.id }).then(async function(user) {
+      console.log(user, "<- user");
       if (user) return cb(null, user);
       try {
         user = await User.create({
@@ -20,6 +23,7 @@ passport.use(new GoogleStrategy({
         });
         return cb(null, user);
       } catch (err) {
+        console.log(err, "<- error")
         return cb(err);
       }
     });
@@ -27,22 +31,21 @@ passport.use(new GoogleStrategy({
 )
 );
 
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
+passport.serializeUser(function(user, cb) {
+  console.log("serialize user")
+  console.log(user)
+  cb(null, user._id);
 });
-
-passport.deserializeUser(function(id, done) {
 
   // Find your User, using your model, and then call done(err, whateverYourUserIsCalled)
   // When you call this done function passport assigns the user document to req.user, which will 
   // be availible in every Single controller function, so you always know the logged in user (check lesson plan)
   passport.deserializeUser(function(userId, cb) {
+    console.log("deserialize user")
     User.findById(userId).then(function(user) {
       cb(null, user);
     });
   });
-
-});
 
 
 
