@@ -4,6 +4,7 @@ function addNote(req, res) {
     Item.findById(req.params.id, function(err, itemDoc) {
         console.log(err)
         console.log(req.body);
+        req.body.userId = req.user._id
         itemDoc.notes.push(req.body);
         itemDoc.save(function (err) {
             console.log(itemDoc);

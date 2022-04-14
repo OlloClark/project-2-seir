@@ -16,6 +16,8 @@
     
 </section>
 
+<% if (user) { %> 
+
 <h4>Add Notes:</h4>
 
 <form id="note-form" method="POST" action="/furnishings/<%= item._id %>/notes">
@@ -23,6 +25,12 @@
     <br>
     <input type="submit" value="Add notes">
   </form>
+
+<% } else { %>
+
+<h4>Log in to leave notes</h4>
+
+<% } %> 
 
   <% if (item.notes.length) { %>
 
@@ -38,7 +46,7 @@
             <td><%= n.content %></td>
           </tr>
           <td>
-            <% if (user && n.userId.equals(user._id)) { %>
+            <% if (user && n.userId == user._id) { %>
               <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
                 <button type="submit">delete note</button>
               </form>
