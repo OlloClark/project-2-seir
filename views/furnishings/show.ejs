@@ -16,7 +16,6 @@
     
 </section>
 
-
 <h4>Add Notes:</h4>
 
 <form id="note-form" method="POST" action="/furnishings/<%= item._id %>/notes">
@@ -38,20 +37,22 @@
           <tr>
             <td><%= n.content %></td>
           </tr>
+          <td>
+            <% if (user && user._id.equals(n.user)) { %>
+              <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+                <button type="submit">delete note</button>
+              </form>
+            <% } %>
+          </td>
         <% }); %>
+        
       </tbody>
     </table>
   <% } else { %>
     <h5>No notes added yet</h5>
   <% } %>
 
-  <td>
-    <% if (user && user._id.equals(i.user)) { %>
-      <form action="/furnishings/<%= i._id %>?_method=DELETE" method="POST">
-        <button type="submit">X</button>
-      </form>
-    <% } %>
-  </td>
+  
 
 </div>
 
