@@ -6,7 +6,6 @@ function addNote(req, res) {
         req.body.userId = req.user._id
         itemDoc.notes.push(req.body);
         itemDoc.save(function (err) {
-            console.log(itemDoc);
             res.redirect(`/furnishings/${itemDoc._id}`);
         });
 
@@ -22,7 +21,6 @@ function deleteNote(req, res, next) {
             res.redirect(`/furnishings/${itemDoc._id}`);
         }).catch(function(err) {
             return next(err);
-            //add a line if an unlogged in user tries to delete?
         });
     });
 };

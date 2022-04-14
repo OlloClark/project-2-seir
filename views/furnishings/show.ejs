@@ -1,7 +1,7 @@
 <%- include("../partials/header")  %>
 
-
 <div class="central-window">
+
 <section>
     <div><em>Item:</em></div>
     <div><%= item.object %> </div>
@@ -13,13 +13,11 @@
     <div><%= item.location %> </div>
     <div><em>Zipcode:</em></div>
     <div><%= item.zipCode %> </div>
-    
 </section>
 
 <% if (user) { %> 
 
 <h4>Add Notes:</h4>
-
 <form id="note-form" method="POST" action="/furnishings/<%= item._id %>/notes">
     <textarea name="content"></textarea>
     <br>
@@ -42,25 +40,25 @@
       </thead>
       <tbody>
         <% item.notes.forEach(function(n) { %>
-          <tr>
-            <td><%= n.content %></td>
-          </tr>
+        <tr>
+          <td><%= n.content %></td>
+        </tr>
           <td>
             <% if (user && n.userId == user._id) { %>
-              <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
-                <button type="submit">delete note</button>
-              </form>
+            <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
+            <button type="submit">delete note</button>
+            </form>
             <% } %> 
           </td>
         <% }); %>
-        
       </tbody>
     </table>
-  <% } else { %>
-    <h5>No notes added yet</h5>
-  <% } %>
 
-  
+  <% } else { %>
+
+    <h5>No notes added yet</h5>
+
+  <% } %>
 
 </div>
 
