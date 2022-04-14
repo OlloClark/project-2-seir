@@ -4,6 +4,8 @@
 
 <h2>Available furnishings</h2>
 
+<% if (items.length) { %>
+
 <table id="list">
     <thead>
       <tr>
@@ -15,18 +17,23 @@
     </thead>
     <br>
     <tbody>
+
       <% items.forEach(function(i) { %>
       <tr>
         <td><%= i.object %> </td>
         <td><%= i.quantity %> </td>
         <td><%= i.quality %> </td>
         <td><%= i.zipCode %> </td>
-        <td><a text-decoration="none" href="/furnishings/<%= i.id %>">details</a></td>
+        <td><a class="link" href="/furnishings/<%= i.id %>">details</a></td>
       </tr>
       <%  }); %> 
 
     </tbody>
 </table>
+<% } else { %>
+  <h5>No items listed at the moment</h5>
+<% } %>
+
 <br><br>
 
 </div>

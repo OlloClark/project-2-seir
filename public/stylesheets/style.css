@@ -26,10 +26,10 @@ body {
   height: 100vh;
   display: grid;
   background-image: url("https://i.imgur.com/WODE5Q2.jpg");
-  background-color: #7a4141;
+  background-color: #e3e7d3;
   grid-template-rows: 50px 1fr 50px;
   grid-template-columns: 1fr 3fr 1fr;
-  font-family: Geneva;
+  font-family: "Geneva";
   color: #F6F2E7;
   
 }
@@ -54,10 +54,6 @@ body > nav {
 }
 
 
-a:hover {
-  color: red;
-  text-decoration: none;
-}
 
 a:visited {
   text-decoration: none;
@@ -115,8 +111,6 @@ a:visited {
   grid-row: 3 / 4 ;
   grid-column: 1 / 4;
   background-color: #82823C;
-  text-align: center;
-  margin: auto;
 }
 
 #contactInfo {
