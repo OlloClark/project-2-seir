@@ -44,6 +44,15 @@
   <% } else { %>
     <h5>No notes added yet</h5>
   <% } %>
+
+  <td>
+    <% if (user && user._id.equals(i.user)) { %>
+      <form action="/furnishings/<%= i._id %>?_method=DELETE" method="POST">
+        <button type="submit">X</button>
+      </form>
+    <% } %>
+  </td>
+
 </div>
 
 <%- include("../partials/footer")  %>
