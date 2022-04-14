@@ -16,7 +16,7 @@ function addNote(req, res) {
 function deleteNote(req, res, next) {
     Item.findOne({"notes._id": req.params.id}).then(function(itemDoc) {
         const note = itemDoc.notes.id(req.params.id);
-        if (!note.user.equals(req.user._id)) return res.redirect(`/furnishings/${itemDoc._id}`);
+        if (!note.user == req.user._id) return res.redirect(`/furnishings/${itemDoc._id}`);
         note.remove();
         itemDoc.save().then(function() {
             res.redirect(`/furnishings/${itemDoc._id}`);
