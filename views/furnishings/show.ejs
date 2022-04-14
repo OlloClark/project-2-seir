@@ -38,11 +38,11 @@
             <td><%= n.content %></td>
           </tr>
           <td>
-            <% if (user && user._id.equals(n.user)) { %>
+            <% if (user && n.userId.equals(user._id)) { %>
               <form action="/notes/<%= n._id %>?_method=DELETE" method="POST">
                 <button type="submit">delete note</button>
               </form>
-            <% } %>
+            <% } %> 
           </td>
         <% }); %>
         
