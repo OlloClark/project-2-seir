@@ -11,6 +11,8 @@ If only there were a way to get it under the noses of the people who could benef
 
 Enter **Furnish LA**. Here, anyone and everyone can post the details and location of any street furniture they see, and we can make sure that shelters, charities and those most in need get wind of it.
 
+![Furnish LA](/images/screenshot.png)
+
 ## Authors
 
 - Ollo Clark
