@@ -15,7 +15,7 @@ Enter **Furnish LA**. Here, anyone and everyone can post the details and locatio
 
 ## Authors
 
-- Ollo Clarkgit fetch
+- Ollo Clark
 
 ## Acknowledgments
 
