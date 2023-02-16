@@ -37,7 +37,7 @@ Background image: JayMantri, pixabay
 
 ## Next Steps/Wishlist
 
-- Optimize for mobile
-- Ability to drop a Google pin and photo
-- 7-day timeout on posts
-- Ultimate goal: to be able to open, post, and close the app in less than 10 seconds
+- Optimize for mobile.
+- Ability to drop a Google pin and photo.
+- 7-day timeout on posts.
+- Ultimate goal: to be able to open, post, and close the app in less than 10 seconds.
