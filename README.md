@@ -11,23 +11,25 @@ If only there were a way to get it under the noses of the people who could benef
 
 Enter **Furnish LA**. Here, anyone and everyone can post the details and location of any street furniture they see, and we can make sure that shelters, charities and those most in need get wind of it.
 
-![Furnish LA](/images/furnishla.jpg)
-
-## Authors
-
-- Ollo Clark
+![Furnish LA](./public/images/furnishla.jpg)
 
 ## Acknowledgments
 
 Background image: JayMantri, pixabay
 
-## Tech stack
+## Technologies
 
-**Technologies used:** HTML, CSS, Node.js, Express, MongoDB, Mongoose
+* HTML5.
+* CSS3.
+* JavaScript.
+* Node.js.
+* Express.
+* MongoDB.
+* Mongoose.
 
 ## Getting started...
 
-**Website:** https://furnish-la.herokuapp.com/
+**Deployed Website:** https://distinct-lion-jumper.cyclic.app/
 
 **Trello board:** https://trello.com/b/fKakcvEt/furnish-la
 
